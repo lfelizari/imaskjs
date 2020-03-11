@@ -70,16 +70,18 @@ vue-imask
         mask: {
           mask: '{8}000000',
           lazy: false
-        },
-        onAccept (e) {
-          const maskRef = e.detail;
-          this.value = maskRef.value;
-          console.log('accept', maskRef.value);
-        },
-        onComplete (e) {
-          const maskRef = e.detail;
-          console.log('complete', maskRef.unmaskedValue);
-        }
+        }        
+      }
+    },
+  methods:{
+    onAccept :function(e) {
+      const maskRef = e.detail;
+      this.value = maskRef.value;
+      console.log('accept', maskRef.value);
+    },
+    onComplete:function (e) {
+      const maskRef = e.detail;
+      console.log('complete', maskRef.unmaskedValue);
       }
     },
     directives: {
